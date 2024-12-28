@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: rgb(0,212,255);
+background: linear-gradient(90deg, rgba(0,212,255,1) 6%, rgba(28,28,113,1) 69%, rgba(2,0,36,1) 90%);
+        }
+        fieldset{
+            border: 5px solid black;
+            border-radius: 10px;
+            width:35%;
+            
+        }
+        select{
+            background-color: purple;
+            width: 170px;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+        input[required]
+        {
+            background-color: rgb(225, 224, 233);
+            border: 2px solid red;
+            border-radius: 6px;
+            color: black;
+        }
+        input[optional]{
+            border:2px dashed green ;
+        }
+        input[readonly]{
+             background-color: rgb(204, 77, 77);
+             border: 2px solid black;
+             border-radius: 6px;
+             font-weight: bold;
+        }
+        input[type="radio"]:checked
+        {
+            
+            height: 20px;
+            width: 20px;
+        }
+        input[type="radio"]:checked + label
+        {
+            
+            color: red;
+            font-family: cursive;
+        }
+       .sb{
+        margin-left: 20px;
+        margin-top: 10px;
+       }
+       
+       button:hover{
+        background-color: blueviolet;
+       }
+       button{
+        background-color: rgb(13, 106, 97);
+       }
+       p{
+        display: none;
+       }
+       input[type="text"]:hover ~ p{
+        display: inline;
+        background-color: greenyellow;
+
+       }input[type="email"]:hover ~ p{
+        display: inline;
+        background-color: greenyellow;
+
+       }
+       input[type="tel"]:hover ~ p{
+        display: inline;
+        background-color: greenyellow;
+
+       }input[type="password"]:hover ~ p{
+        display: inline;
+        background-color: greenyellow;
+
+       }
+       .yes,
+       .no
+       {
+        display: none;
+       }
+       input:focus:valid ~ .yes{
+        display: inline;
+       }
+       input:focus:valid ~ .no{
+        display: none;
+       }
+       input:focus:invalid ~ .no{
+        display: inline;
+       }
+       input:focus:invalid ~ .yes{
+        display: none;
+       }
+       
+    </style>
+</head>
+<body>
+    <h1>COURSE REGISTRATION FORM</h1>
+    <fieldset>
+        <legend>Personal Details</legend>
+        <form action="">
+            <table>
+                <tr>
+                    <td>
+                        <label for="">Firstname</label>
+                    </td>
+                    <td>
+                        <input type="text" name="FirstName" id=""  placeholder="EX:Tejas" required>
+                        <p>Enter Your Name</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Surname</label>
+                    </td>
+                    <td>
+                        <input type="text" name="SURNAME"  placeholder="EX:N K" optional>
+                        <p>Enter Your SurName</p>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Mobile Number</label>
+                    </td>
+                    <td>
+                        <input type="tel" name="" id="" placeholder="EX:9876543210" required>
+                        <p>Enter Your Number</p>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Email</label>
+                    </td>
+                    <td>
+                        <input type="email" name="Email" id=""  placeholder="EX:tejas33@gmail.com"  required>
+                        <p>Enter Your Email</p>
+                        <img src="yes1.png" alt="" class="yes" height="18px" width="18px">
+                        <img src="no.png" alt="" class="no" height="17px" width="17px">
+
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Password</label>
+                    </td>
+                    <td>
+                        <input type="password" name="password" id="" placeholder="Minimum 8 characters" required>
+                        <p>Enter Password</p>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Confirm Password</label>
+                    </td>
+                    <td>
+                        <input type="password" name="CONFIRMPASSWORD" id="" placeholder="Minimun 8 characters" required> 
+                        <p>Include atleast </p><br>
+                        <p>1 Uppercase,
+                        1 Lowercase,
+                        1 Special ch</p>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td>
+                            <label for="">Dob</label>
+                        </td>
+                        <td>
+                            <input type="date" name="DOB" id="" required>
+                        
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="">Gender</label>
+                        </td>
+                        <td>
+                            <input type="radio" name="gender" id="" value="M"><label for="">Male</label>
+                            <input type="radio" name="gender" id="" value="F"><label for="">Female</label>
+                            <input type="radio" name="gender" id="" value="O"><label for="">Others</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Age</td>
+                        <td>
+                            <input type="number" name="" id="" max="100" min="18">
+                            <img src="yes1.png" alt="" class="yes" height="18px" width="18px">
+                            <img src="no.png" alt="" class="no" height="17px" width="17px">
+                        </td>
+                    </tr>
+                    <tr>
+                        
+                        <td>
+                            <label for="">Select Country</label>
+                        </td>
+                        <td>
+                            <select name="" id="">
+                            <option value="INDIA">INDIA</option>
+                            <option value="USA">USA</option>
+                            <option value="USSR">USSR</option>
+                        </select>
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="">Upload Picture</label>
+                        </td>
+                        <td>
+                            <input type="file" name="" id="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button>Reset</button>
+                        </td>
+                    </tr>
+
+               
+            </table>
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend>Course Details</legend>
+    <form action="">
+        <table>
+            <tr>
+                <td>
+                    <label for="">Select Course</label>
+                </td>
+                <td>
+                    <select name="" id="">
+                        <option value="java">JAVA FULL STACK</option>
+                        <option value="corejava">CORE JAVA</option>
+                        <option value="py">PYTHON FULL STACK</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Delivery Mode</label>
+                </td>
+                <td>
+                    <input type="radio" name="mode" id="" value="on"><label for="">Online</label>
+                    <input type="radio" name="mode" id="" value="off"><label for="">Offline</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Institute Name</label>
+                </td>
+                <td>
+                    <input type="text" value="TAP ACADEMY" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Comments</label>
+                </td>
+                
+            </tr>
+            <tr>
+                <td>
+                    <textarea name="" id=""></textarea>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                <a href="" download="">click here to download</a>
+            </td>
+            </tr>
+        </table>
+    </form>
+</fieldset>
+
+        <button type="submit" class="sb">Submit</button>
+    
+    
+</body>
+</html>
